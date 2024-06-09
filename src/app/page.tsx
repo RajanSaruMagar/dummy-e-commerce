@@ -35,15 +35,20 @@ const Landing = () => {
               />
             </label>
           </div>
+          <div className="flex gap-2 text-white">
+            <div className="font-semibold">Home</div>
+            <div className="font-semibold">|</div>
+            <div className="font-semibold">login</div>
+          </div>
           <div className="flex  gap-10">
             <div onClick={() => setOpenModal(true)}>
-              <div className="flex  text-[30px] ">
+              <div className="flex  text-[30px] text-white ">
                 <TiShoppingCart />
                 <sup className=" text-[15px]">{count}</sup>
               </div>
             </div>
           </div>
-          <div className="text-[30px]">
+          <div className="text-[30px] text-white">
             <div className="flex">
               <RxAvatar />
               <RiArrowDropDownLine />
@@ -52,8 +57,8 @@ const Landing = () => {
         </div>
         <div className="text-black">
           <Modal show={openModal} onClose={() => setOpenModal(false)}>
-            <div className="font-semibold text-3xl mx-40 mt-10">My Cart</div>
-            <div className="h-auto ">
+            <div className="font-semibold text-3xl mx-40 mt-10 text-white">My Cart</div>
+            <div className="h-auto bg-slate-400 text-white">
               <div className="mx-40 pt-4 flex font-semibold gap-40">
                 <p>Product img</p>
                 <p>Product Name</p>
@@ -102,8 +107,8 @@ const Landing = () => {
                 )}
               </div>
             </div>
-            <Button onClick={() => setOpenModal(false)} className="text-black">
-              close
+            <Button onClick={() => setOpenModal(false)} className="text-white flex justify-center py-1 bg-red-700 border">
+              Close
             </Button>
           </Modal>
         </div>
@@ -114,7 +119,7 @@ const Landing = () => {
           </div>
           <div className="flex flex-col gap-1">
             <img src="/carosuel/carosuel2.jpg" alt="error" className="h-40 " />
-            <img src="/carosuel/carosuel3.jpg" alt="error"  className="h-40 "/>
+            <img src="/carosuel/carosuel3.jpg" alt="error" className="h-40 " />
           </div>
           <div>
             <img src="/carosuel/carosuel4.jpg" alt="error" className="h-80" />
@@ -123,24 +128,24 @@ const Landing = () => {
         {/* ? */}
         <div className="flex flex-col text-white gap-10 mx-60 my-10">
           <p className="text-3xl  font-bold ">Beauty Products</p>
-          <div className="flex justify-between border-2 p-10 rounded-md bg-[#7e7474f5]">
+          <div className="flex justify-between border-2 p-10 rounded-md bg-slate-800">
             {" "}
             <Data1 />
           </div>
           <p className="text-3xl font-bold ">Dress</p>
-          <div className="flex justify-between border-2 p-10 rounded-md bg-[#7e7474f5]">
+          <div className="flex justify-between border-2 p-10 rounded-md bg-slate-800">
             <Data2 />
           </div>
           <p className="text-3xl font-bold ">Home Appliance</p>
-          <div className="flex gap-20 border-2 p-10 rounded-md bg-[#7e7474f5]">
+          <div className="flex gap-20 border-2 p-10 rounded-md bg-slate-800">
             <Data3 />
           </div>
           <p className="text-3xl font-bold ">Tech</p>
-          <div className="flex gap-20 border-2 p-10 rounded-md bg-[#7e7474f5]">
+          <div className="flex gap-20 border-2 p-10 rounded-md bg-slate-800">
             <Data4 />
           </div>
         </div>
-        <div className="mx-40">
+        <div className="px-60 text-white font-medium bg-slate-800">
           <Footers />
         </div>
       </div>
